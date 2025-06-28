@@ -1,0 +1,250 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI';
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(images/bakground_image.jpg);
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+
+/* Header */
+.navbar {
+    height: 10vh;
+    /* background-color: ; */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navlogo {
+    color: white;
+    cursor: pointer;
+    font-size: 1.3vmax;
+    margin-left: 50px;
+
+}
+
+.nav-anchors {
+    display: flex;
+    justify-content: space-between;
+    gap: 5vw;
+    margin-right: 35px;
+}
+
+
+.nav-anchors i {
+    font-size: 3vw;
+    color: white;
+    display: none;
+}
+
+.nav-anchors i:hover{
+    color: #009688;
+}
+
+#anchors {
+    text-decoration: none;
+    color: white;
+    font-size: 1.26vmax;
+    font-weight: 600;
+    transition-duration: 0.1s;
+}
+#anchors:hover{
+    border-bottom: 4px solid #009688;
+    
+}
+
+/* Main */
+
+.content {
+    height: calc(100vh - 10vh);
+    width: 100%;
+
+}
+
+
+.hero-section {
+    height: 55%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    gap: 2vw;
+}
+
+
+
+.hero {
+    width: 50%;
+    color: white;
+    font-size: 3.5vw;
+    font-weight: 750;
+    text-align: center;
+    cursor: pointer;
+}
+
+.hero:hover{
+    color:rgb(0, 200, 255);
+    font-size: 3.7vw;
+}
+
+.hero-msg {
+    width: 50%;
+    text-align: center;
+    font-size: 2vmax;
+    color: white;
+    user-select: none;
+
+}
+
+
+.button-box {
+    height: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5vw;
+}
+
+
+.button {
+    color: white;
+    height: 3.5vw;
+    width: 25vw;
+    font-weight: 700;
+    font-size: 1.5vw;
+    /* text-align: center; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #009688;
+    border-radius: 25px;
+    background-color: transparent;
+    cursor: pointer;
+    position: relative;
+    /* position relative ki ha so that  the elements in it  can apply absolute position! */
+}
+
+span {
+    height: 100%;
+    width: 0%;
+    border-radius: 25px;
+    background-color: #009688;
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    transition-duration: 0.5s;
+}
+
+.button:hover span {
+    width: 100%;
+}
+.button:hover{
+    font-size: 1.7vw;
+}
+
+.foot-panel {
+    height: 10%;
+    font-weight: 600;
+    font-size: 1.3vw;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0.5vw;
+}
+
+
+
+/* -------- */
+
+@media (max-width:725px) {
+    .navbar {
+        height: 10vh;
+    }
+
+    .navlogo {
+        font-size: 4.5vw;
+        margin-left: 25px;
+    }
+
+    .nav-anchors {
+        margin-right: 20px;
+    }
+
+    .nav-anchors h4 {
+        display: none;
+    }
+
+    .nav-anchors i {
+        display: block;
+        font-size: 7.5vw;
+    }
+
+    #anchors {
+        margin-right: 15px;
+        font-size: 2vw;
+    }
+
+    body {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(images/bakground_imagemini.jpg);
+        background-size: cover;
+        /* background-repeat: no-repeat; */
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .hero-section {
+        height: 45%;
+        justify-content: center;
+    }
+
+    .hero {
+        font-size: 7vw;
+    }
+    .hero:hover{
+        font-size: 7.2vw;
+    }
+
+    .hero-msg{
+        width: 80%;
+    }
+
+
+    .button-box {
+        height: 40%;
+        flex-direction: column;
+        gap: 10vw;
+
+    }
+
+    .button{
+        height: 12vw;
+        width: 50vw;
+        font-size: 5vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50px;
+        border-width: 4px;
+    }
+    .button:hover{
+        font-size: 5.2vw;
+    }
+
+
+    .foot-panel {
+        height: 15%;
+        font-size: 4vw;
+        font-weight: 700;
+        text-align: center;
+        padding: 2vw;
+    }
+}
